@@ -7,10 +7,17 @@ function whatIsInAName(collection, source) {
     console.log(source.last);
     console.log("=================");
     console.log(Object.keys(source)[0]);
-//    for (i = 0; i <3;i++) {
-        console.log(Object.keys(collection).map(function(key) {
-            return collection[key];}));
-  //  }
+    console.log(Object.keys(source).map(function(key) { return source[key]}));
+    //    for (i = 0; i <3;i++) {
+    console.log(Object.keys(collection).map(function(key) {
+        if (Object.keys(source) in collection[key]){
+            return collection[key];
+        };
+    }));
+        //  }
+    Object.keys(collection).map(function(key) {
+        console.log(key);
+    });
 
 
 
